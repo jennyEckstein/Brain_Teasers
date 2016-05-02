@@ -15,18 +15,6 @@ public class MissingInteger {
 				}
 			}
 		}
-
 		return 1;
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		int[] array = {1,3,6,4,1,2};
-		MissingInteger missingInteger = new MissingInteger();
-		int result = missingInteger.solution(array);
-		
-		System.out.println(result);
-	}
-
 }
