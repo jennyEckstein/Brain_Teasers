@@ -6,6 +6,14 @@ public class PermCheck {
 	
 	public int solution(int [] array){
 		
+		if (array.length == 1){
+			if(array[0] == 1){
+				return 1;
+			}else{
+				return 0;
+			}
+		}
+		
 		Arrays.sort(array);
 		
 		for (int i = 1; i < array.length; i++){
