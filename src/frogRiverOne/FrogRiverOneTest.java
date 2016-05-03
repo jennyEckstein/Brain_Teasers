@@ -30,6 +30,15 @@ public class FrogRiverOneTest {
 	}
 	
 	@Test
+	public void testAllSameElement(){
+		int [] array = {2,2,2,2};
+		int distance = 2;
+		
+		int result = frogRiverOne.solution(distance, array);		
+		assertTrue(result == -1);
+	}
+	
+	@Test
 	public void testEmptyArray(){
 		int[] array = {};
 		int distance = 5;
@@ -44,7 +53,7 @@ public class FrogRiverOneTest {
 		int distance = 3;
 
 		int result = frogRiverOne.solution(distance, array);
-		assertTrue(result == 0);
+		assertTrue(result == -1);
 	}
 
 }
