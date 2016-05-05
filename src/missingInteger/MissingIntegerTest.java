@@ -29,6 +29,14 @@ public class MissingIntegerTest {
 	}
 	
 	@Test
+	public void textExtremeSingle(){
+		int [] array = {3};
+		int result = missingInteger.solution(array);
+		
+		assertTrue(result == 3);
+	}
+	
+	@Test
 	public void testEmptyArray(){
 		int [] array = {};
 		int result = missingInteger.solution(array);
