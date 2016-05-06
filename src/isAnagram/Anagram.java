@@ -18,6 +18,7 @@ public class Anagram {
 			int index = str2.indexOf(c);
 			
 			if (index != -1){
+				//System.out.println(str2.substring(0, index) + "+"+ str2.substring(index + 1, str2.length()));
 				str2 = str2.substring(0, index) + str2.substring(index + 1, str2.length());
 			}else{
 				return false;
@@ -32,6 +33,7 @@ public class Anagram {
 		// TODO Auto-generated method stub
 
 		Anagram anagram = new Anagram();
+		System.out.println(anagram.isAnagram("twelve plus one", "eleven plus two"));
 		
 		System.out.println(anagram.isAnagram("word", "wrdo"));
 		System.out.println(anagram.isAnagram("worfd", "hwrdo"));
