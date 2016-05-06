@@ -27,13 +27,4 @@ public class ValidParantheses {
 		}
 		return stack.empty();
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		ValidParantheses vp = new ValidParantheses();
-		
-		System.out.println(vp.isValid("[](){}"));
-	}
-
 }
