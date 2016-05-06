@@ -4,6 +4,10 @@ public class Anagram {
 	
 	public boolean isAnagram(String str1, String str2){
 		
+		if(str1 == null || str2 == null){
+			return false;
+		}
+		
 		if(str1.length() != str2.length()){
 			return false;
 		}
@@ -31,6 +35,7 @@ public class Anagram {
 		
 		System.out.println(anagram.isAnagram("word", "wrdo"));
 		System.out.println(anagram.isAnagram("worfd", "hwrdo"));
+		System.out.println(anagram.isAnagram(null, null));
 	}
 
 }
