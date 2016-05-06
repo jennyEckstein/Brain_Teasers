@@ -8,7 +8,7 @@ public class Anagram {
 			return false;
 		}
 		
-		if(str1.length() != str2.length()){
+		if((str1.length() != str2.length()) || str1 == null || str2 == null){
 			return false;
 		}
 		
@@ -18,7 +18,6 @@ public class Anagram {
 			int index = str2.indexOf(c);
 			
 			if (index != -1){
-				//System.out.println(str2.substring(0, index) + "+"+ str2.substring(index + 1, str2.length()));
 				str2 = str2.substring(0, index) + str2.substring(index + 1, str2.length());
 			}else{
 				return false;
@@ -27,17 +26,4 @@ public class Anagram {
 		
 		return str2.isEmpty();
 	}
-	
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Anagram anagram = new Anagram();
-		System.out.println(anagram.isAnagram("twelve plus one", "eleven plus two"));
-		
-		System.out.println(anagram.isAnagram("word", "wrdo"));
-		System.out.println(anagram.isAnagram("worfd", "hwrdo"));
-		System.out.println(anagram.isAnagram(null, null));
-	}
-
 }
