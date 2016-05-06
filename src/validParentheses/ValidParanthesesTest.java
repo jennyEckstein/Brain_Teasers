@@ -30,5 +30,9 @@ public class ValidParanthesesTest {
 		assertTrue(!vp.isValid("[]{{{([[){}{}"));
 	}
 	
+	@Test
+	public void testEmpty(){
+		assertTrue(!vp.isValid(null));
+	}
 
 }

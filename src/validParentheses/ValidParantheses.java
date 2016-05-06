@@ -5,6 +5,9 @@ import java.util.*;
 public class ValidParantheses {
 	
 	public boolean isValid(String str){
+		
+		if (str == null) { return false;}
+		
 		HashMap<Character, Character> map = new HashMap<Character, Character>();
 		map.put('(', ')');
 		map.put('[', ']');
