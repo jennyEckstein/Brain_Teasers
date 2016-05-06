@@ -22,8 +22,7 @@ public class Anagram {
 			}else{
 				return false;
 			}
-		}
-		
+		}		
 		return str2.isEmpty();
 	}
 }
