@@ -13,6 +13,19 @@ public class LinkedList {
 		newNode.setNext(head);
 		return newNode;
 	}
+	
+	public Node find(Node head, int value){
+		
+		if (head == null){
+			return null;
+		}
+		Node currentElement  = head;
+		
+		while(currentElement.getNextNode() != null && currentElement.getValue() != value){
+			currentElement.getNextNode();
+		}
+		return currentElement;
+	}
 
 	
 	public Node getHead() {
