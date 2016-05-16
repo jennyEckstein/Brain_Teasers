@@ -10,6 +10,10 @@ public class Node {
 		this.value = value;
 	}
 	
+	public void setNext(Node head){
+		this.nextNode = head;
+	}
+	
 	/* GETTERS */
 	public int getValue() {
 		return value;
