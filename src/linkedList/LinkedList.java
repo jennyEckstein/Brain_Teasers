@@ -36,7 +36,7 @@ public class LinkedList {
 		}
 		
 		Node currentElement = head;
-		while(currentElement.hasNext()){
+		while(!currentElement.hasNext()){
 			Node nextNode = currentElement.getNextNode();
 			
 			if (nextNode.getValue() == value){

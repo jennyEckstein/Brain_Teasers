@@ -35,16 +35,33 @@ public class LinkedListTest {
 	@Test
 	public void testInsertMultipleElements(){
 		
-		Node newHead = this.list.insert(1);
-		Node newHead1 = this.list.insert(2);
-		Node newHead2 = this.list.insert(3);
+		this.list.insert(1);
+		this.list.insert(2);
+		this.list.insert(3);
 		
-		assertTrue(newHead2.getValue() == 3);
-		assertTrue(newHead2.getNextNode().getValue() == 2);
-		assertTrue(newHead2.getNextNode().getNextNode().getValue() == 1);
-		assertTrue(newHead2.getNextNode().getNextNode().getNextNode() == null);
+		Node head = this.list.getHead();
+		
+		assertTrue(head.getValue() == 3);
+		assertTrue(head.getNextNode().getValue() == 2);
+		assertTrue(head.getNextNode().getNextNode().getValue() == 1);
+		assertTrue(head.getNextNode().getNextNode().getNextNode() == null);
 	}
 	
+	@Test
+	public void testDeleteElementFullList(){
+		
+		this.list.insert(1);
+		this.list.insert(2);
+		this.list.insert(3);
+		
+		Node head = this.list.getHead();
+		
+		this.list.delete(2);
+		
+		assertTrue(head.getValue() == 3);
+		assertTrue(head.getNextNode().getValue() == 1);
+		assertNull(head.getNextNode().getNextNode());
+	}
 	
 
 }
