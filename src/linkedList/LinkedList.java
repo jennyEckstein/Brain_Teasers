@@ -22,13 +22,31 @@ public class LinkedList {
 		}
 		Node currentElement  = head;
 		
-		while(currentElement.getNextNode() != null && currentElement.getValue() != value){
+		while(currentElement.hasNext() && currentElement.getValue() != value){
 			currentElement.getNextNode();
 		}
 		return currentElement;
 	}
 	
 
+	public boolean delete(int value){
+		
+		if(head == null){
+			return false;
+		}
+		
+		Node currentElement = head;
+		while(currentElement.hasNext()){
+			Node nextNode = currentElement.getNextNode();
+			
+			if (nextNode.getValue() == value){
+				currentElement.setNext(nextNode.getNextNode());
+				
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	public Node getHead() {
 		return head;

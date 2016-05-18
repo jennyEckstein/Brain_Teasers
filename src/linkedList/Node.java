@@ -21,6 +21,10 @@ public class Node {
 	public Node getNextNode() {
 		return nextNode;
 	}
+	
+	public boolean hasNext(){
+		return nextNode == null;
+	}
 
 	@Override
 	public String toString() {
