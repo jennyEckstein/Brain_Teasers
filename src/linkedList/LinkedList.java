@@ -8,10 +8,11 @@ public class LinkedList {
 		this.setHead(null);
 	}
 
-	public Node insert(Node head, int value){
+	public Node insert(int value){
 		Node newNode = new Node(value);
-		newNode.setNext(head);
-		return newNode;
+		newNode.setNext(this.head);		
+		this.head = newNode;
+		return head;
 	}
 	
 	public Node find(Node head, int value){
@@ -26,6 +27,7 @@ public class LinkedList {
 		}
 		return currentElement;
 	}
+	
 
 	
 	public Node getHead() {

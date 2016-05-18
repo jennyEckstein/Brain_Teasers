@@ -28,21 +28,23 @@ public class LinkedListTest {
 	@Test
 	public void testInsertEmptyList(){
 		
-		Node newHead = this.list.insert(list.getHead(), 1);
+		Node newHead = this.list.insert(1);
 		assertTrue(newHead.getValue() == 1);
 	}
 	
 	@Test
 	public void testInsertMultipleElements(){
 		
-		Node newHead = this.list.insert(list.getHead(), 1);
-		Node newHead1 = this.list.insert(newHead, 2);
-		Node newHead2 = this.list.insert(newHead1, 3);
+		Node newHead = this.list.insert(1);
+		Node newHead1 = this.list.insert(2);
+		Node newHead2 = this.list.insert(3);
 		
 		assertTrue(newHead2.getValue() == 3);
 		assertTrue(newHead2.getNextNode().getValue() == 2);
 		assertTrue(newHead2.getNextNode().getNextNode().getValue() == 1);
 		assertTrue(newHead2.getNextNode().getNextNode().getNextNode() == null);
 	}
+	
+	
 
 }
